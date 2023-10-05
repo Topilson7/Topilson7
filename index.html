@@ -10,15 +10,16 @@
             padding: 0;
             font-family: Arial, sans-serif;
             background: linear-gradient(to right, #FF0000, #00FF00, #0000FF); /* Animação de cores */
+            background-size: 200% 100%;
             animation: moveBackground 5s linear infinite;
         }
 
         @keyframes moveBackground {
             0% {
-                background-position: 0%;
+                background-position: 200% 0;
             }
             100% {
-                background-position: 100%;
+                background-position: -200% 0;
             }
         }
 
@@ -28,7 +29,8 @@
         }
 
         h1 {
-            font-size: 36px;
+            font-size: 48px;
+            color: #000;
         }
 
         #content {
@@ -37,8 +39,9 @@
         }
 
         #subtitulo {
-            font-size: 24px;
-            font-family: 'Times New Roman', Times, serif; /* Mudança da fonte */
+            font-size: 28px;
+            font-family: 'Times New Roman', Times, serif;
+            color: #333;
         }
 
         #botoes {
@@ -49,18 +52,18 @@
         }
 
         .botao {
-            background-color: #00FF00; /* Cor dos botões */
-            color: #000000; /* Cor do texto nos botões */
-            padding: 10px 20px;
-            font-size: 18px;
+            background-color: #00FF00;
+            color: #000;
+            padding: 12px 24px;
+            font-size: 24px;
             border: none;
-            margin: 5px;
+            margin: 10px;
             cursor: pointer;
         }
 
         .botao:last-child {
-            background-color: #00FF00; /* Cor do último botão */
-            color: #000000; /* Cor do texto no último botão */
+            background-color: #00FF00;
+            color: #000;
         }
 
         #siga-nos {
@@ -69,27 +72,33 @@
         }
 
         #siga-nos a {
-            background-color: #00FF00; /* Cor do botão "Siga-nos" */
+            background-color: #00FF00;
             color: #FFFFFF;
-            padding: 15px 30px;
-            font-size: 24px;
+            padding: 20px 40px;
+            font-size: 28px;
             text-decoration: none;
             border: none;
             cursor: pointer;
+            border-radius: 50px;
+            transition: background-color 0.3s ease;
+        }
+
+        #siga-nos a:hover {
+            background-color: #009900;
         }
 
         @media screen and (max-width: 768px) {
             h1 {
-                font-size: 24px;
+                font-size: 36px;
             }
             #subtitulo {
-                font-size: 18px;
+                font-size: 22px;
             }
             .botao {
-                font-size: 16px;
+                font-size: 20px;
             }
             #siga-nos a {
-                font-size: 20px;
+                font-size: 24px;
             }
         }
     </style>
