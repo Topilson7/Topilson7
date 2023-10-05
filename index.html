@@ -10,9 +10,18 @@
             padding: 0;
             font-family: Arial, sans-serif;
             background: linear-gradient(to right, #FF0000, #00FF00, #0000FF); /* Animação de cores */
-            animation: changeColor 5s linear infinite;
+            animation: moveBackground 5s linear infinite;
         }
-        
+
+        @keyframes moveBackground {
+            0% {
+                background-position: 0%;
+            }
+            100% {
+                background-position: 100%;
+            }
+        }
+
         #header {
             text-align: center;
             padding: 30px;
@@ -29,20 +38,29 @@
 
         #subtitulo {
             font-size: 24px;
+            font-family: 'Times New Roman', Times, serif; /* Mudança da fonte */
         }
 
         #botoes {
             margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
         }
 
         .botao {
             background-color: #00FF00; /* Cor dos botões */
-            color: #FFFFFF;
+            color: #000000; /* Cor do texto nos botões */
             padding: 10px 20px;
             font-size: 18px;
             border: none;
             margin: 5px;
             cursor: pointer;
+        }
+
+        .botao:last-child {
+            background-color: #00FF00; /* Cor do último botão */
+            color: #000000; /* Cor do texto no último botão */
         }
 
         #siga-nos {
@@ -58,16 +76,6 @@
             text-decoration: none;
             border: none;
             cursor: pointer;
-        }
-
-        /* Animação de cores */
-        @keyframes changeColor {
-            0% {
-                background-position: 0%;
-            }
-            100% {
-                background-position: 100%;
-            }
         }
 
         @media screen and (max-width: 768px) {
@@ -92,7 +100,7 @@
     </div>
     <div id="content">
         <p>Existem vários mercados lucrativos onde é possível ganhar dinheiro apenas usando um smartphone ou computador:</p>
-        <p>Temos aulas online para te tirar do zero à LIBERDADE FINANCEIRA</p>
+        <p id="subtitulo">Temos aulas online para te tirar do zero à LIBERDADE FINANCEIRA</p>
         <p>Que mercado pretendes:</p>
         <div id="botoes">
             <button class="botao">Marketing Digital</button>
