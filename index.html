@@ -1,62 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-    <title>Ponte Levadiça Hidráulica</title>
-    <style>
-        body {
-            background-color: white;
-            color: white;
-        }
-        
-        .navbar {
-            background-color: #007bff;
-            padding: 10px;
-            text-align: center;
-        }
-        
-        .search-button {
-            background-color: #007bff;
-            color: white;
-            padding: 5px 10px;
-            border: none;
-            cursor: pointer;
-        }
-        
-        .image-slider {
-            width: 100%;
-            height: 300px;
-            overflow: hidden;
-        }
-        
-        .image-slider img {
-            width: 100%;
-            height: auto;
-            animation: slider 10s infinite linear;
-        }
-        
-        @keyframes slider {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(-100%); }
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SóLucra</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #FF0000, #00FF00, #0000FF); /* Animação de cores */
+            animation: changeColor 5s linear infinite;
+        }
+        
+        #header {
+            text-align: center;
+            padding: 30px;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        #content {
+            text-align: center;
+            padding: 20px;
+        }
+
+        #subtitulo {
+            font-size: 24px;
+        }
+
+        #botoes {
+            margin-top: 20px;
+        }
+
+        .botao {
+            background-color: #00FF00; /* Cor dos botões */
+            color: #FFFFFF;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        #siga-nos {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        #siga-nos a {
+            background-color: #00FF00; /* Cor do botão "Siga-nos" */
+            color: #FFFFFF;
+            padding: 15px 30px;
+            font-size: 24px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Animação de cores */
+        @keyframes changeColor {
+            0% {
+                background-position: 0%;
+            }
+            100% {
+                background-position: 100%;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 24px;
+            }
+            #subtitulo {
+                font-size: 18px;
+            }
+            .botao {
+                font-size: 16px;
+            }
+            #siga-nos a {
+                font-size: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="navbar">
-        <h1>Ponte Levadiça Hidráulica</h1>
-        <form action="https://www.google.com/search" method="get" target="_blank">
-            <input type="text" name="q" placeholder="Pesquisar..." />
-            <button type="submit" class="search-button">Pesquisar</button>
-        </form>
-    </div>
-    
-    <div class="image-slider">
-        <img src="imagem1.jpg" alt="Ponte Levadiça Hidráulica" />
-        <img src="imagem2.jpg" alt="Ponte Levadiça Hidráulica" />
-        <img src="imagem3.jpg" alt="Ponte Levadiça Hidráulica" />
-    </div>
-    
-    <script>
-        // Aqui você pode adicionar qualquer código JavaScript necessário
-    </script>
+    <div id="header">
+        <h1>SóLucra</h1>
+    </div>
+    <div id="content">
+        <p>Existem vários mercados lucrativos onde é possível ganhar dinheiro apenas usando um smartphone ou computador:</p>
+        <p>Temos aulas online para te tirar do zero à LIBERDADE FINANCEIRA</p>
+        <p>Que mercado pretendes:</p>
+        <div id="botoes">
+            <button class="botao">Marketing Digital</button>
+            <button class="botao">Tráfego Pago</button>
+            <button class="botao">Cryptomoedas</button>
+            <button class="botao">Forex</button>
+            <button class="botao">Opções Binárias</button>
+        </div>
+    </div>
+    <div id="siga-nos">
+        <a href="https://chat.whatsapp.com/Lj8ZiaNj4DO2eyTgSBbtJr">Siga-nos</a>
+    </div>
 </body>
 </html>
